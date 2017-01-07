@@ -140,6 +140,9 @@ var Course = (function () {
         // find combos that don't have conflicts
         this.filterConflicts();
     };
+    // sample combos:
+    //      [{"core":{"times":[{"name":"01","day":2,"start":15,"end":17},{"name":"01","day":3,"start":15,"end":17},{"name":"01","day":5,"start":15,"end":17}],"name":"01"},"tutorial":{"times":[{"name":"01","day":1,"start":9,"end":11}],"name":"01"}},
+    //      {"core":{"times":[{"name":"01","day":2,"start":15,"end":17},{"name":"01","day":3,"start":15,"end":17},{"name":"01","day":5,"start":15,"end":17}],"name":"01"},"tutorial":{"times":[{"name":"02","day":1,"start":3,"end":5}],"name":"02"}},...]
     Course.prototype.filterConflicts = function () {
         for (var _i = 0, _a = this.combos; _i < _a.length; _i++) {
             var combo = _a[_i];
