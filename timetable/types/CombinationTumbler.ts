@@ -15,10 +15,19 @@ export class CombinationTumbler{
 
     addSlot(slot: Course){
         this.slots.push(slot);
+        this.slotCount++;
     }
 
+    bruteForce(){
+
+
+
+    }
+
+
+
     print(){
-       // console.log(this.slots);
+      console.log(this.slots);
     }
 
 }

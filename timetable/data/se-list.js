@@ -1,5 +1,5 @@
-module.exports = {
-    "se":[
+module.exports = /*{
+    "se":*/[
     {
         "name": "Software Design I - Introduction to Software Development",
         "credits": 4,
@@ -3806,5 +3806,5 @@ module.exports = {
         "code": "SFWRENG 4X03",
         "term": 2
     }
-]};
+]/*}*/;
 

@@ -25,11 +25,11 @@ export class TimetableGenerator {
 
        // console.log(this.data[0]);
         this.tumbler.addSlot(new Course(this.data[0]));
-        this.tumbler.addSlot(new Course(this.data[1]));
-        this.tumbler.addSlot(new Course(this.data[2]));
-        this.tumbler.addSlot(new Course(this.data[3]));
-        this.tumbler.addSlot(new Course(this.data[4]));
-        //this.tumbler.print();
+        // this.tumbler.addSlot(new Course(this.data[1]));
+        // this.tumbler.addSlot(new Course(this.data[2]));
+        // this.tumbler.addSlot(new Course(this.data[3]));
+        // this.tumbler.addSlot(new Course(this.data[4]));
+        // this.tumbler.print();
     }
 
 

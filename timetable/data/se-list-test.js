@@ -99,11 +99,122 @@ module.exports = /*{
                     ]
                 ],
                 "loc": "HH 302"
+            },
+            {
+                "name": "02",
+                "serial": "11869",
+                "supervisors": [
+                    "Jacques Carette"
+                ],
+                "times": [
+                    [
+                        2,
+                        "mo",
+                        8,
+                        30,
+                        10,
+                        20,
+                        "ABB 165"
+                    ]
+                ]
+            },
+            {
+                "name": "03",
+                "serial": "11870",
+                "supervisors": [
+                    "Jacques Carette"
+                ],
+                "times": [
+                    [
+                        2,
+                        "tu",
+                        14,
+                        30,
+                        16,
+                        20,
+                        "JHE 210"
+                    ]
+                ]
+            }
+        ],
+        "lab": [
+            {
+                "name": "01",
+                "serial": "11596",
+                "supervisors": [
+                    "Ryan Leduc"
+                ],
+                "times": [
+                    [
+                        2,
+                        "th",
+                        8,
+                        30,
+                        11,
+                        20,
+                        "ITB 238"
+                    ]
+                ]
+            },
+            {
+                "name": "02",
+                "serial": "11597",
+                "supervisors": [
+                    "Ryan Leduc"
+                ],
+                "times": [
+                    [
+                        2,
+                        "we",
+                        8,
+                        30,
+                        11,
+                        20,
+                        "ITB 238"
+                    ]
+                ]
+            },
+            {
+                "name": "03",
+                "serial": "11598",
+                "supervisors": [
+                    "Ryan Leduc"
+                ],
+                "times": [
+                    [
+                        2,
+                        "tu",
+                        8,
+                        30,
+                        11,
+                        20,
+                        "ITB 238"
+                    ]
+                ]
+            },
+            {
+                "name": "04",
+                "serial": "11599",
+                "supervisors": [
+                    "Ryan Leduc"
+                ],
+                "times": [
+                    [
+                        2,
+                        "mo",
+                        8,
+                        30,
+                        11,
+                        20,
+                        "ITB 238"
+                    ]
+                ]
             }
         ],
         "code": "SFWRENG 2AA4",
         "term": 2
     },
+
     {
         "name": "Data Structures and Algorithms",
         "credits": 3,
