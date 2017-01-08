@@ -15,6 +15,7 @@ var Course = (function () {
         this.tutLin = [];
         this.coreLin = [];
         this.labLin = [];
+        this.validCombos = [];
         this.course = data;
         this.name = data.name;
         this.logObj(this.combos);
@@ -147,12 +148,20 @@ var Course = (function () {
     Course.prototype.filterConflicts = function () {
         var testCombos = [
             {
-                "core": { "times": [{ "name": "01", "day": 1, "start": 7, "end": 10 }, { "name": "01", "day": 3, "start": 7, "end": 9 }, { "name": "01", "day": 5, "start": 11, "end": 13 }], "name": "01" },
+                "core": {
+                    "times": [{ "name": "01", "day": 1, "start": 7, "end": 8 }, {
+                            "name": "01",
+                            "day": 3,
+                            "start": 7,
+                            "end": 9
+                        }, { "name": "01", "day": 5, "start": 11, "end": 13 }], "name": "01"
+                },
                 "tutorial": { "times": [{ "name": "01", "day": 1, "start": 9, "end": 13 }], "name": "01" },
                 "lab": { "times": [{ "name": "01", "day": 4, "start": 1, "end": 7 }], "name": "01" }
             }];
-        var combos = testCombos;
-        // let combos = this.combos;
+        //      TEST
+        //        let combos = testCombos;
+        var combos = this.combos;
         var comboLen = combos.length;
         // var [] = this.combos;
         // combo is a combo core, tutorial, and lab sections
@@ -164,6 +173,9 @@ var Course = (function () {
         //      }
         for (var _i = 0, combos_1 = combos; _i < combos_1.length; _i++) {
             var combo = combos_1[_i];
+            var foundValidCombo = false;
+            // no valid counts can be found
+            var foundConflict = false;
             // part is either core, tutorial, or lab
             // i.e. {core: times[{name, start, end}, {...}]}
             //this.log("Combo = ");
@@ -203,32 +215,54 @@ var Course = (function () {
                 if ('length' in core) {
                 }
                 tempCombo.core = core;
-                this.logObj(tempCombo);
-                this.logObj(core);
+                // this.logObj(tempCombo);
+                // this.logObj(core);
                 // this.logObj();
                 if (combo.tutorial.times.length == 0) {
                     this.log("Tutorial times length = 0");
+                    // let dummy = new DayClass();
+                    // dummy.name = 'none';
+                    combo.tutorial.times[0] = this.newDummyDayClass();
                 }
-                else {
-                    // for each tutorial time
-                    // tutorial: times[{name: 02, start, end}, {...}]
-                    for (var _c = 0, _d = combo.tutorial.times; _c < _d.length; _c++) {
-                        var tut = _d[_c];
-                        tempCombo.tutorial = tut;
-                        //tempCombo.lab = null;
-                        // this.logObj(tempCombo);
-                        // this.validateCombo(tempCombo);
-                        //this.log(tut);
-                        // for each lab
-                        for (var _e = 0, _f = combo.lab.times; _e < _f.length; _e++) {
-                            var lab = _f[_e];
-                            tempCombo.lab = lab;
-                            this.validateCombo(tempCombo);
+                // for each tutorial time
+                // tutorial: times[{name: 02, start, end}, {...}]
+                for (var _c = 0, _d = combo.tutorial.times; _c < _d.length; _c++) {
+                    var tut = _d[_c];
+                    tempCombo.tutorial = tut;
+                    //tempCombo.lab = null;
+                    // this.logObj(tempCombo);
+                    // this.validateCombo(tempCombo);
+                    //this.log(tut);
+                    // for each lab
+                    if (combo.lab.times.length == 0) {
+                        // this.log("Lab times length = 0");
+                        tempCombo.lab = this.newDummyDayClass();
+                    }
+                    for (var _e = 0, _f = combo.lab.times; _e < _f.length; _e++) {
+                        var lab = _f[_e];
+                        tempCombo.lab = lab;
+                        // found a combo without
+                        if (this.validateCombo(tempCombo)) {
+                            foundValidCombo = true;
+                        }
+                        else {
+                            foundConflict = true;
                         }
                     }
                 }
             }
+            this.logObj(combo);
+            if (foundValidCombo && !foundConflict) {
+                this.validCombos.push(combo);
+            }
         }
+        this.log("Filtered combos = ");
+        this.logObj(this.validCombos);
+    };
+    Course.prototype.newDummyDayClass = function () {
+        var d = new DayClass();
+        d.name = "NONE";
+        return d;
     };
     // private validateCombo(tempCombo: {core: Array<TimeBlock>; tutorial: Array<TimeBlock>; lab: Array<TimeBlock>}) {
     //
@@ -236,37 +270,65 @@ var Course = (function () {
     // sample input:
     // {"core":{"name":"01","day":1,"start":7,"end":9},"tutorial":{"name":"01","day":1,"start":9,"end":13},"lab":[]}
     Course.prototype.validateCombo = function (combo) {
-        this.logObj(combo);
+        // this.logObj(combo);
         var core = combo.core, tutorial = combo.tutorial, lab = combo.lab;
-        if (core.day === tutorial.day) {
-            this.log("Core start = " + core.start + " ");
-            // does the core class start and end before the tutorial?
-            // OR does the tutorial class start and end before the core?
-            // else the classes overlap and there is a conflict
-            // check if the combo has a tutorial and/or a lab
-            if ('start' in tutorial && 'start' in lab) {
-            }
-            else if ('start' in tutorial) {
-            }
-            else if ('start' in lab) {
-            }
-            else {
-            }
-            var start = [];
-            for (var i = 0; i < 3; i++) {
-            }
-            if (core.start < tutorial.start && core.end <= tutorial.start ||
-                tutorial.start < core.start && tutorial.end <= core.start) {
-                this.log("no conflict");
-            }
-            else {
-                this.log("Conflict FOUND");
-                return false;
-            }
+        //if(core.day === tutorial.day) { //  this.log("Found same day class");
+        // this.log(`Core start = ${core.start} `);
+        // does the core class start and end before the tutorial?
+        // OR does the tutorial class start and end before the core?
+        // else the classes overlap and there is a noConflict
+        // check if the combo has a tutorial and/or a lab
+        // if('start' in tutorial && 'start' in lab) {
+        //
+        // } else if('start' in tutorial) {
+        //
+        // } else if('start' in lab) {
+        //
+        // } else {
+        //
+        // }
+        // let start = []
+        // for (let i = 0; i < 3; i++) {
+        //
+        // }
+        //
+        // this.noConflict(core, tutorial);
+        if (this.noConflict(core, tutorial) &&
+            this.noConflict(core, lab) &&
+            this.noConflict(tutorial, lab)) {
+            return true;
         }
+        return false;
+        // if(core.start < tutorial.start && core.end <= tutorial.start ||
+        //     tutorial.start < core.start && tutorial.end <= core.start){
+        //     this.log("no noConflict");
+        // } else {
+        //
+        //     this.log("Conflict FOUND");
+        //     return false;
+        // }
+        //
         // for(let core of combo.core) {
         //     this.logObj(core);
         // }
+    };
+    Course.prototype.noConflict = function (a, b) {
+        // this.log("In noConflict()");
+        // they must be on the same day
+        // in cases where the course doesn't have a tutorial or lab
+        if (a.name == 'NONE' || b.name == 'NONE' || (a.day != b.day)) {
+            return true;
+        }
+        // does a start and finish before b OR
+        // does b start and finish before a
+        // there is a conflict if not
+        if ((a.start < b.start && a.end <= b.start ||
+            b.start < a.start && b.end <= a.start)) {
+            this.log("no  Conflict");
+            return true;
+        }
+        this.log("Conflict FOUND");
+        return false;
     };
     return Course;
 }());
