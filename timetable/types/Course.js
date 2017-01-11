@@ -533,7 +533,8 @@ var TimeBlock = (function () {
         // no class starts earlier than 8, so minus 8 to get rid of offset
         // then multiply by two to change hours to half hours
         var time = (hour - 8) * 2;
-        time += minute > 0 ? 1 : 0; // if minute isn't 0, then it's 20
+        time += minute < 30 ? 0 : 1; // if minute isn't 0, then it's 20
+        // time += minute > 0 ? 1 : 0; // if minute isn't 0, then it's 20
         //console.log("Linearized time = " + time);
         return time;
     };

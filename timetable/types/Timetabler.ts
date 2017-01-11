@@ -32,10 +32,15 @@ export class Timetabler {
     // returns true if valid
     trySchedule(day, start, end): boolean{
 
-        let conflictCount;
+        let conflictCount = 0;
         for(let i = start; i <= end; i++) {
+            // if(this.schedule[day][i].tryScheduleHalfHour()){
+            //     conflictCount++;
+            // }
             if(this.schedule[day][i].isScheduled){
                 conflictCount++;
+            } else {
+                this.schedule[day][i].isScheduled = true;
             }
         }
         return conflictCount == 0;
@@ -62,12 +67,13 @@ class SmartHalfHour {
     constructor() {}
 
     tryScheduleHalfHour(): boolean {
-        // if (this.isScheduled) {
-        //     return false
-        // } else {
-        //     this.isScheduled = true;
-            return true;
-        // }
+        if (!this.isScheduled) {
+            this.isScheduled = true;
+            return true
+        }
+            // this.isScheduled = true;
+            return false;
+
 
 
 

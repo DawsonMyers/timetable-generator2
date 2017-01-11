@@ -108,10 +108,10 @@ export class CombinationTumbler {
                 // add if valid
                 if(conflictCount == 0){
                     log('VALID TIMETABLE FOUND======================');
-                    log('======================');
-                    log('======================');
-                    log('======================');
-                    log('======================');
+                    // log('======================');
+                    // log('======================');
+                    // log('======================');
+                    // log('======================');
                     logObj(this.tempCombo);
                     // clone copy of array into valid combo array
                     this.validFullCombos.push(this.tempCombo.slice(0));

@@ -31,6 +31,13 @@ var TimetableGenerator = (function () {
         //log("Filtered combos = ");
         //logObj(this.tumbler.slots[0].SimplifyCombos());
         this.tumbler.bruteForce();
+        // let t = new Timetabler();
+        //
+        //     log(t.trySchedule(1, 0, 3));
+        //     log(t.trySchedule(1, 2, 5));
+        //     log(t.trySchedule(3, 0, 3));
+        //     log(t.trySchedule(3, 0, 3));
+        //     log(t.trySchedule(5, 0, 3));
     };
     TimetableGenerator.prototype.simulateLodash = function () {
     };

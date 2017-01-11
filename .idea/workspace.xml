@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="156d03be-aed7-4a12-803b-2631df1417cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetable/types/TimetableBuilder.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetable/types/Timetabler.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetable/types/Utilities.ts" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/terminal.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/data/test.js" afterPath="$PROJECT_DIR$/timetable/data/test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/CombinationTumbler.js" afterPath="$PROJECT_DIR$/timetable/types/CombinationTumbler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/CombinationTumbler.js.map" afterPath="$PROJECT_DIR$/timetable/types/CombinationTumbler.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/CombinationTumbler.ts" afterPath="$PROJECT_DIR$/timetable/types/CombinationTumbler.ts" />
@@ -18,7 +12,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/TimetableGenerator.js" afterPath="$PROJECT_DIR$/timetable/types/TimetableGenerator.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/TimetableGenerator.js.map" afterPath="$PROJECT_DIR$/timetable/types/TimetableGenerator.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/TimetableGenerator.ts" afterPath="$PROJECT_DIR$/timetable/types/TimetableGenerator.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/Timetabler.ts" afterPath="$PROJECT_DIR$/timetable/types/Timetabler.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,11 +32,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.49843848">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="TimetableGenerator.ts" pinned="false" current-in-tab="false">
+          <file leaf-file-name="TimetableGenerator.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/timetable/types/TimetableGenerator.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="185">
-                  <caret line="33" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                <state relative-caret-position="250">
+                  <caret line="33" column="11" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="33" selection-end-column="11" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#42#74#0" expanded="true" />
@@ -63,11 +57,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CombinationTumbler.ts" pinned="false" current-in-tab="true">
+          <file leaf-file-name="CombinationTumbler.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/timetable/types/CombinationTumbler.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="519">
-                  <caret line="132" column="37" lean-forward="false" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+                <state relative-caret-position="1836">
+                  <caret line="110" column="20" lean-forward="false" selection-start-line="110" selection-start-column="23" selection-end-line="113" selection-end-column="53" />
                   <folding>
                     <element signature="e#173#212#0" expanded="true" />
                   </folding>
@@ -78,8 +72,8 @@
           <file leaf-file-name="Course.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/timetable/types/Course.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2185">
-                  <caret line="388" column="38" lean-forward="false" selection-start-line="388" selection-start-column="38" selection-end-line="388" selection-end-column="38" />
+                <state relative-caret-position="11645">
+                  <caret line="688" column="35" lean-forward="false" selection-start-line="688" selection-start-column="35" selection-end-line="688" selection-end-column="35" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#42#70#0" expanded="true" />
@@ -91,11 +85,11 @@
           <file leaf-file-name="Timetabler.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/timetable/types/Timetabler.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                <state relative-caret-position="595">
+                  <caret line="38" column="16" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="38" selection-end-column="16" />
                   <folding>
                     <element signature="e#43#71#0" expanded="true" />
-                    <marker date="1484111583787" expanded="true" signature="1399:1552" ph="..." />
+                    <marker date="1484112926442" expanded="true" signature="1599:1762" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -134,62 +128,10 @@
           <file leaf-file-name="Course.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/timetable/types/Course.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="5712">
+                <state relative-caret-position="5746">
                   <caret line="338" column="0" lean-forward="false" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
                   <folding>
-                    <marker date="1484110920819" expanded="true" signature="7985:7986" ph="[...]" />
-                    <marker date="1484110920819" expanded="true" signature="7985:14903" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="7985:18592" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="9412:14812" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="10813:14655" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="12738:13114" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="12822:13037" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="13131:13222" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="13305:14641" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="13411:13608" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="13747:14136" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="13831:14056" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="14218:14623" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="14415:14494" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="14524:14601" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="14741:14802" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="14821:14897" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="14957:15074" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="15080:15348" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="15403:16863" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="15519:16258" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="16392:16428" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="16915:17551" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="17180:17300" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="17407:17484" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="17698:18259" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="17730:17820" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="17891:18203" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="18265:18340" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="18393:18570" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="18492:18564" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="19191:19253" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="19360:19608" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="19383:19588" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="19393:19507" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="19667:19729" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="19803:20016" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="19835:19987" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="20140:21935" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="20183:20463" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="20193:20276" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="20310:20386" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="20626:21525" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="20823:20896" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="20940:21397" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="21265:21353" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="21406:21519" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="21587:21910" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="21597:21725" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="21797:21883" ph="//..." />
-                    <marker date="1484110920819" expanded="true" signature="21999:22217" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="22026:22194" ph="{...}" />
-                    <marker date="1484110920819" expanded="true" signature="22051:22188" ph="{...}" />
+                    <marker date="1484112426826" expanded="true" signature="7985:7986" ph="[...]" />
                   </folding>
                 </state>
               </provider>
@@ -260,8 +202,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/timetable/types/Course.ts" />
         <option value="$PROJECT_DIR$/timetable/types/Timetabler.ts" />
-        <option value="$PROJECT_DIR$/timetable/types/TimetableGenerator.ts" />
         <option value="$PROJECT_DIR$/timetable/types/CombinationTumbler.ts" />
+        <option value="$PROJECT_DIR$/timetable/types/TimetableGenerator.ts" />
       </list>
     </option>
   </component>
@@ -469,8 +411,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -570,12 +512,13 @@
       <workItem from="1483855659089" duration="7227000" />
       <workItem from="1483899487382" duration="29244000" />
       <workItem from="1484019180841" duration="22786000" />
-      <workItem from="1484107631041" duration="4189000" />
+      <workItem from="1484107631041" duration="5759000" />
+      <workItem from="1484144245077" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96285000" />
+    <option name="totallyTimeSpent" value="97866000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -590,26 +533,26 @@
     <frame x="-9" y="14" width="1936" height="1066" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24035281" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14978679" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="2583" y="1" width="518" height="980" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24035281" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Copy/Paste" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18336888" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39911798" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="2666" y="1" width="940" height="980" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39911798" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -976,62 +919,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/timetable/types/Course.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5712">
+        <state relative-caret-position="5746">
           <caret line="338" column="0" lean-forward="false" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
           <folding>
-            <marker date="1484110920819" expanded="true" signature="7985:7986" ph="[...]" />
-            <marker date="1484110920819" expanded="true" signature="7985:14903" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="7985:18592" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="9412:14812" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="10813:14655" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="12738:13114" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="12822:13037" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="13131:13222" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="13305:14641" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="13411:13608" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="13747:14136" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="13831:14056" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="14218:14623" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="14415:14494" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="14524:14601" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="14741:14802" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="14821:14897" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="14957:15074" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="15080:15348" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="15403:16863" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="15519:16258" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="16392:16428" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="16915:17551" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="17180:17300" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="17407:17484" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="17698:18259" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="17730:17820" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="17891:18203" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="18265:18340" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="18393:18570" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="18492:18564" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="19191:19253" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="19360:19608" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="19383:19588" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="19393:19507" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="19667:19729" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="19803:20016" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="19835:19987" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="20140:21935" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="20183:20463" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="20193:20276" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="20310:20386" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="20626:21525" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="20823:20896" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="20940:21397" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="21265:21353" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="21406:21519" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="21587:21910" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="21597:21725" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="21797:21883" ph="//..." />
-            <marker date="1484110920819" expanded="true" signature="21999:22217" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="22026:22194" ph="{...}" />
-            <marker date="1484110920819" expanded="true" signature="22051:22188" ph="{...}" />
+            <marker date="1484112426826" expanded="true" signature="7985:7986" ph="[...]" />
           </folding>
         </state>
       </provider>
@@ -1080,9 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
           <caret line="3948" column="23" lean-forward="false" selection-start-line="3948" selection-start-column="16" selection-end-line="3948" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1104,8 +992,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/timetable/types/Course.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2185">
-          <caret line="388" column="38" lean-forward="false" selection-start-line="388" selection-start-column="38" selection-end-line="388" selection-end-column="38" />
+        <state relative-caret-position="17">
+          <caret line="281" column="13" lean-forward="false" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#42#70#0" expanded="true" />
@@ -1115,32 +1003,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/timetable/types/Timetabler.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="595">
+          <caret line="38" column="16" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="38" selection-end-column="16" />
           <folding>
             <element signature="e#43#71#0" expanded="true" />
-            <marker date="1484111583787" expanded="true" signature="1399:1552" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timetable/types/TimetableGenerator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#42#74#0" expanded="true" />
+            <marker date="1484112926442" expanded="true" signature="1599:1762" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timetable/types/CombinationTumbler.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="132" column="37" lean-forward="false" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+        <state relative-caret-position="1836">
+          <caret line="110" column="20" lean-forward="false" selection-start-line="110" selection-start-column="23" selection-end-line="113" selection-end-column="53" />
           <folding>
             <element signature="e#173#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/types/TimetableGenerator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="33" column="11" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="33" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#74#0" expanded="true" />
           </folding>
         </state>
       </provider>

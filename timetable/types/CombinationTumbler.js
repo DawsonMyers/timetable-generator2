@@ -87,10 +87,10 @@ var CombinationTumbler = (function () {
                 // add if valid
                 if (conflictCount_1 == 0) {
                     Utilities_1.log('VALID TIMETABLE FOUND======================');
-                    Utilities_1.log('======================');
-                    Utilities_1.log('======================');
-                    Utilities_1.log('======================');
-                    Utilities_1.log('======================');
+                    // log('======================');
+                    // log('======================');
+                    // log('======================');
+                    // log('======================');
                     Utilities_1.logObj(_this.tempCombo);
                     // clone copy of array into valid combo array
                     _this.validFullCombos.push(_this.tempCombo.slice(0));
