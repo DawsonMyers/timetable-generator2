@@ -1,11 +1,19 @@
 /**
  * Created by Dawson on 1/4/2017.
  */
+import * as _ from 'lodash';
+import {log, logObj} from './Utilities';
+
 
 export class Course {
     //list = [];
     course = {};
     name: string;
+    slotId:number;
+
+    simpleSet: DayClass[];
+
+
 
     // array of combos of core, tutorial, and lab
     combos/*: any[]*/ = [];
@@ -71,10 +79,10 @@ export class Course {
             part.push(new TimeBlock(t[i].name, t[i]));
 
         }
-        if(part.length < 3) {
-            if("tutorial" in part[1]){}
-            //let name = part[1].name
-        }
+        // if(part.length < 3) {
+        //     if("tutorial" in part[1]){}
+        //     //let name = part[1].name
+        // }
         //console.log(JSON.stringify(part));
     }
 
@@ -119,12 +127,16 @@ export class Course {
                 let combo = new Combo();
                 combo.core = core[i];
                 combo.tutorial = tutorial[k];
+
+                //
+                //combo.lab = [new DummyTimeBlock()];
+                //
                 //this.logObj(combos);
                 combos.push(combo);
             }
         }
-       // this.log("Course combo count = " + combos.length);
-       // this.logObj(combos);
+        // this.log("Course combo count = " + combos.length);
+        // this.logObj(combos);
         //this.logObj(combos);
 
         if (combos.length < 1 || combos.length == null) {
@@ -144,7 +156,7 @@ export class Course {
             var comLen = combos.length;
 
             for ( let l = 0; l < labLen && count  < 100; l++) {
-            // for ( let l = 0; l < lab.length && count  < 100; l++) {
+                // for ( let l = 0; l < lab.length && count  < 100; l++) {
                 if(l >= lab.length) break;
                 //this.log("Value of l = " + l);
                 //this.log("Course combo count = " + combos.length);
@@ -153,7 +165,7 @@ export class Course {
 
                 // for (var m of combos) { // && false
                 for (let m = 0; m < comLen && count < 100; m++) { // && false
-                // for (let m = 0; m < combos.length && count < 100; m++) { // && false
+                    // for (let m = 0; m < combos.length && count < 100; m++) { // && false
                     //if(m >= combos.length) break;
                     let combo = new Combo();
                     //this.log("m = " + m + " combos.length = " + combos.length);
@@ -175,25 +187,63 @@ export class Course {
 
 
                 //this.log("Course combo count = " + c.length);
-                //this.logObj(c);
+                // this.logObj(c);
 
             }
 
         }
 
 
-        this.log("Cartesian product = Core x T x L -> " + core.length + " x " + tutorial.length + " x " + lab.length);
-        this.log("Course combo count = " + combos.length);
+        // this.log("Cartesian product = Core x T x L -> " + core.length + " x " + tutorial.length + " x " + lab.length);
+        // this.log("Course combo count = " + combos.length);
         this.combos = combos;
+        this.fillEmptyCourseParts();
         //this.logObj(combos);
 
         // find combos that don't have conflicts
         this.filterConflicts();
+
+        // generate simplified set
+        //this.simplifyCombos();
     }
 // sample combos:
 //      [{"core":{"times":[{"name":"01","day":2,"start":15,"end":17},{"name":"01","day":3,"start":15,"end":17},{"name":"01","day":5,"start":15,"end":17}],"name":"01"},"tutorial":{"times":[{"name":"01","day":1,"start":9,"end":11}],"name":"01"}},
 //      {"core":{"times":[{"name":"01","day":2,"start":15,"end":17},{"name":"01","day":3,"start":15,"end":17},{"name":"01","day":5,"start":15,"end":17}],"name":"01"},"tutorial":{"times":[{"name":"02","day":1,"start":3,"end":5}],"name":"02"}},...]
+private fillEmptyCourseParts(){
+    let combos = this.combos;
+    let checkForArray = (coursePart) => {
+        // core, tut, lab
+        for(let part in coursePart){
+            // combo.core, combo.tutorial, combo.lab
+        if('length' in coursePart[part]) {
+            coursePart = new DummyTimeBlock();
+            // this.log('Filled course part=====' + part);
+            // this.logObj(part);
+        }
+        }
+    };
+        // for(let combo of combos){
+        //     this.log('BEFORE');
+        //     this.logObj(combo);
+        //     checkForArray(combo)
+        //     this.log('AFTER');
+        //     this.logObj(combo);
+        // }
 
+    for(let combo in combos){
+        // combo.core, combo.tutorial, combo.lab
+        if((combo['tutorial'] !=null) && 'length' in combo['tutorial']) {
+            combo['tutorial'] = new DummyTimeBlock();
+            this.log('Filled course part=====' + combo['tutorial']);
+            // this.logObj(part);
+        }
+        if((combo['lab'] !=null) && 'length' in combo['lab']) {
+            combo['lab'] = new DummyTimeBlock();
+            this.log('Filled course part=====' + combo['lab']);
+            // this.logObj(part);
+        }
+    }
+}
     private filterConflicts() {
 
         let testCombos = [
@@ -214,8 +264,30 @@ export class Course {
 //        let combos = testCombos;
         let combos = this.combos;
 
+        // logObj(this.combos);
+        // console.log("combos[0].lab = " + this.logObj(this.combos));
 
-        var comboLen = combos.length;
+        _.each(combos, (combo)=>{
+            if(!_.has(combo, "core.times")){
+                // this.log("No core for = ");
+                // this.logObj(combo);
+                _.set(combo, "core", new DummyTimeBlock());
+                // this.logObj(combo);
+            }
+            if(!_.has(combo, "tutorial.times")){
+                this.log("No tut for = ");
+                // this.logObj(combo);
+                _.set(combo, "tutorial", new DummyTimeBlock());
+                // this.logObj(combo);
+            }
+            if(!_.has(combo, "lab.times")){
+                this.log("No lab for = ");
+                // this.logObj(combo);
+                _.set(combo, "lab", new DummyTimeBlock());
+                // this.logObj(combo);
+            }
+        });
+        let comboLen = combos.length;
         // var [] = this.combos;
 
         // combo is a combo core, tutorial, and lab sections
@@ -225,8 +297,11 @@ export class Course {
         //          tutorial: times[{name: 02, start, end}, {...}],
         //          lab: times[{name: 03, start, end}, {...}]
         //      }
-        for (let combo of combos) {
+        // for (let combo of combos) {
 
+
+        for (let c = 0; c < combos.length; c++){
+            let combo = combos[c];
             let foundValidCombo: boolean = false;
             // no valid counts can be found
             let foundConflict = false;
@@ -234,13 +309,38 @@ export class Course {
             // i.e. {core: times[{name, start, end}, {...}]}
 
             //this.log("Combo = ");
-            //this.logObj(combo);
+            // this.logObj(combo);
 
             //this.logObj(combo.core.times);
             //
             // for each core time
             // i.e.: core: times[{name: 01, start, end}, {...}]
-            for (let core of combo.core.times) {
+            //this.log("BEFORE");
+            //this.logObj(combo);
+            // let hasLen = ((combo.core != null ) && 'length' in combo.core);
+            // if (hasLen && combo.core.times.length == 0) {
+            //     this.log("core times length = 0");
+                // let dummy = new DayClass();
+                // dummy.name = 'none';
+                // combo.core = {times: [], name: 'NONE'};
+                // combo.core = this.newDummyDayClass();
+                // combo.core = new DummyTimeBlock();
+            // }
+            //this.log("AFTER");
+            // this.logObj(combo);
+
+            let coreLen = 0;
+            let missing = false
+            if('length' in combo.core){
+                comboLen =1;
+                missing = true;
+            } else {
+                coreLen = combo.core.times.length;
+            }
+
+            for(let _c = 0; _c < coreLen; _c++){
+            // for (let core of combo.core.times) {
+                let core = combo.core.times[_c];
                 //this.log(core);
                 // put valid combos in temp combos
                 //      let tempCombo = {
@@ -272,20 +372,25 @@ export class Course {
                 //let tempCombo: Combo = new Combo();
 
                 // make sure
-                if ('length' in core) {
-
-                }
+                // if ('length' in core) {
+                //
+                // }
                 tempCombo.core = core;
 
                 // this.logObj(tempCombo);
                 // this.logObj(core);
                 // this.logObj();
 
-                if (combo.tutorial.times.length == 0) {
-                    this.log("Tutorial times length = 0");
+                // this.logObj(combo.tutorial.times);
+
+                //let hasLen = ((combo.tutorial != null ) && 'length' in combo.tutorial);
+                if (('length' in combo.tutorial) && combo.tutorial.length == 0) {
+                    // this.log("Tutorial times length = 0");
                     // let dummy = new DayClass();
                     // dummy.name = 'none';
-                    combo.tutorial.times[0] = this.newDummyDayClass();
+                    // combo.tutorial = {times: [], name: 'NONE'};
+                    // combo.tutorial.times[0] = this.newDummyDayClass();
+                    combo.tutorial = new DummyTimeBlock();
                 }
 
                 // for each tutorial time
@@ -297,10 +402,19 @@ export class Course {
                     // this.validateCombo(tempCombo);
                     //this.log(tut);
                     // for each lab
-                    if (combo.lab.times.length == 0) {
-                        // this.log("Lab times length = 0");
-                        tempCombo.lab = this.newDummyDayClass();
+                    let hasLen = ((combo.lab != null ) && 'length' in combo.lab);
+                    if (hasLen && combo.lab.length == 0) {
+                        this.log("Lab times length = 0");
+                        // tempCombo.lab.times[0] = this.newDummyDayClass();
+
+                        // combos
+                        // combo.lab = {times: [], name: 'NONE'};
+                        // combo.lab.times[0] = this.newDummyDayClass();
+
+                        combo.lab = new DummyTimeBlock();
+
                     }
+
                     for (let lab of combo.lab.times) {
 
                         tempCombo.lab = lab;
@@ -327,17 +441,18 @@ export class Course {
 
             }
 
-            this.logObj(combo);
+            //this.logObj(combo);
             if(foundValidCombo && !foundConflict) {
                 this.validCombos.push(combo)
             }
         }
 
-        this.log("Filtered combos = ");
-        this.logObj(this.validCombos);
+        // this.log("Filtered combos = ");
+        // this.logObj(this.validCombos);
     }
     private newDummyDayClass(): DayClass {
         let d = new DayClass();
+        // let d = new DayClass();
         d.name = "NONE";
         return d;
 
@@ -355,47 +470,47 @@ export class Course {
         let {core, tutorial, lab} = combo;
 
         //if(core.day === tutorial.day) { //  this.log("Found same day class");
-            // this.log(`Core start = ${core.start} `);
+        // this.log(`Core start = ${core.start} `);
 
-            // does the core class start and end before the tutorial?
-            // OR does the tutorial class start and end before the core?
-            // else the classes overlap and there is a noConflict
+        // does the core class start and end before the tutorial?
+        // OR does the tutorial class start and end before the core?
+        // else the classes overlap and there is a noConflict
 
-            // check if the combo has a tutorial and/or a lab
-            // if('start' in tutorial && 'start' in lab) {
-            //
-            // } else if('start' in tutorial) {
-            //
-            // } else if('start' in lab) {
-            //
-            // } else {
-            //
-            // }
-            // let start = []
-            // for (let i = 0; i < 3; i++) {
-            //
-            // }
-            //
-            // this.noConflict(core, tutorial);
+        // check if the combo has a tutorial and/or a lab
+        // if('start' in tutorial && 'start' in lab) {
+        //
+        // } else if('start' in tutorial) {
+        //
+        // } else if('start' in lab) {
+        //
+        // } else {
+        //
+        // }
+        // let start = []
+        // for (let i = 0; i < 3; i++) {
+        //
+        // }
+        //
+        // this.noConflict(core, tutorial);
 
-            if(this.noConflict(core, tutorial) &&
-                this.noConflict(core, lab) &&
-                this.noConflict(tutorial, lab)){
-                return true;
-            }
+        if(this.noConflict(core, tutorial) &&
+            this.noConflict(core, lab) &&
+            this.noConflict(tutorial, lab)){
+            return true;
+        }
 
-            return false;
+        return false;
 
-            // if(core.start < tutorial.start && core.end <= tutorial.start ||
-            //     tutorial.start < core.start && tutorial.end <= core.start){
-            //     this.log("no noConflict");
-            // } else {
-            //
-            //     this.log("Conflict FOUND");
-            //     return false;
-            // }
+        // if(core.start < tutorial.start && core.end <= tutorial.start ||
+        //     tutorial.start < core.start && tutorial.end <= core.start){
+        //     this.log("no noConflict");
+        // } else {
+        //
+        //     this.log("Conflict FOUND");
+        //     return false;
+        // }
 
-       //
+        //
         // for(let core of combo.core) {
         //     this.logObj(core);
         // }
@@ -418,13 +533,44 @@ export class Course {
         if(
             (a.start < b.start && a.end <= b.start ||
             b.start < a.start && b.end <= a.start)){
-            this.log("no  Conflict");
+            // this.log("no  Conflict");
             return true
         }
 
-            this.log("Conflict FOUND");
-            return false;
+        // this.log("Conflict FOUND");
+        return false;
 
+    }
+
+    // takes takes the individual class times out of a combo and puts them into a single array
+    simplifyCombos(): DayClass[]{
+
+
+        let set: any[] = [];
+        // let addClass: (days: DayClass[]) => {
+        //     for(let d of days){}
+        // };
+        for(let comb of this.validCombos){
+            let tempSet: DayClass[] = [];
+            //let day: DayClass = new DayClass();
+            this.addDays(tempSet, comb.core.times);
+            this.addDays(tempSet, comb.tutorial.times);
+            this.addDays(tempSet, comb.lab.times);
+
+            set.push(tempSet);
+        }
+
+        this.simpleSet = set;
+        return set;
+    }
+
+    // takes ie core.times[]
+    // [{"name":"03","day":2,"start":13,"end":17}]
+    addDays(set: DayClass[], days: DayClass[]){
+        //let set: DayClass[];
+        for(var day of days){
+            set.push(day);
+        }
     }
 
 }
@@ -439,21 +585,46 @@ export class Course {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export const DAYS = {mo: 1, tu: 2, we: 3, th: 4, fr: 5};
 
-// combination of core, tutorial, and lab
-export class Combo {
-    core: DayClass[] = [];
-    tutorial: DayClass[] = [];
-    lab: DayClass[] = [];
+export class SimpleCombo{
+    name: string;
+
 }
 
-class SingleCombo {
+// combination of core, tutorial, and lab
+export class Combo {
+    // core: DayClass[]|any[] = [];
+    // tutorial: DayClass[]|any[] = [];
+    // lab: DayClass[]|any[] = [];
+    core: any[] = [];
+    tutorial: any[] = [];
+    lab: any[] = [];
+}
+
+export class SingleCombo {
     core: DayClass;
     tutorial: DayClass;
     lab: DayClass;
 }
 
+export interface ITimeBlock{
+    name: string;
+    times: any[];
+
+}
+export class DummyTimeBlock implements ITimeBlock{
+    name: string = 'DUMMY';
+    times: any[] = [];
+
+
+    constructor(){
+        let day = new DayClass();
+        day.name = 'NONE';
+        this.times.push(day);
+    }
+}
+
 // time blocks for either core, lab, or tutorial
-export class TimeBlock {
+export class TimeBlock implements ITimeBlock{
     //coursePart = {};
 
     //oldTimes = [];
@@ -482,11 +653,11 @@ export class TimeBlock {
         for (let i = 0; i < t.length; i++) {
             //console.log("t[i][1] = " + t[i][1]);
 
-            let day = new DayClass() //.init({
+            let day = new DayClass(); //.init({
             day.name = this.name;
-                day.day =  DAYS[t[i][1]];
-                day.start = this.linearize(t[i][2], t[i][3]);  // linearize(start-hour, start-minute)
-                day.end = this.linearize(t[i][4], t[i][5]);     // linearize(end-hour, end-minute)
+            day.day =  DAYS[t[i][1]];
+            day.start = this.linearize(t[i][2], t[i][3]);  // linearize(start-hour, start-minute)
+            day.end = this.linearize(t[i][4], t[i][5]);     // linearize(end-hour, end-minute)
 
             // insert obj with day number, start, end
             this.times.push(day);
@@ -522,7 +693,7 @@ export class TimeBlock {
     }
 }
 
-class DayClass{
+export class DayClass{
     name: string;
     day: number;
     start: number;

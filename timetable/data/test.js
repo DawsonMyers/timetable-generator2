@@ -2968,3 +2968,12 @@ var u = [{
             "tutorial": {"times": [{"name": "03", "day": 1, "start": 13, "end": 17}], "name": "03"},
             "lab": {"times": [{"name": "04", "day": 1, "start": 1, "end": 7}], "name": "04"}
         }]
+
+var c =
+    [
+        {"name":"01","day":1,"start":7,"end":9},
+        {"name":"01","day":3,"start":7,"end":9},
+        {"name":"01","day":5,"start":11,"end":13},
+        {"name":"01","day":1,"start":9,"end":13},
+        {"name":"01","day":4,"start":1,"end":7}
+        ]

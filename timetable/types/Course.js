@@ -1,7 +1,8 @@
+"use strict";
 /**
  * Created by Dawson on 1/4/2017.
  */
-"use strict";
+var _ = require("lodash");
 var Course = (function () {
     function Course(data) {
         //list = [];
@@ -49,9 +50,10 @@ var Course = (function () {
             //console.log("t[i] =" + t[i]);
             part.push(new TimeBlock(t[i].name, t[i]));
         }
-        if (part.length < 3) {
-            if ("tutorial" in part[1]) { }
-        }
+        // if(part.length < 3) {
+        //     if("tutorial" in part[1]){}
+        //     //let name = part[1].name
+        // }
         //console.log(JSON.stringify(part));
     };
     /////////////////////////////////////////
@@ -83,6 +85,9 @@ var Course = (function () {
                 var combo = new Combo();
                 combo.core = core[i];
                 combo.tutorial = tutorial[k];
+                //
+                //combo.lab = [new DummyTimeBlock()];
+                //
                 //this.logObj(combos);
                 combos.push(combo);
             }
@@ -135,17 +140,51 @@ var Course = (function () {
                 }
             }
         }
-        this.log("Cartesian product = Core x T x L -> " + core.length + " x " + tutorial.length + " x " + lab.length);
-        this.log("Course combo count = " + combos.length);
+        // this.log("Cartesian product = Core x T x L -> " + core.length + " x " + tutorial.length + " x " + lab.length);
+        // this.log("Course combo count = " + combos.length);
         this.combos = combos;
+        this.fillEmptyCourseParts();
         //this.logObj(combos);
         // find combos that don't have conflicts
         this.filterConflicts();
+        // generate simplified set
+        //this.simplifyCombos();
     };
     // sample combos:
     //      [{"core":{"times":[{"name":"01","day":2,"start":15,"end":17},{"name":"01","day":3,"start":15,"end":17},{"name":"01","day":5,"start":15,"end":17}],"name":"01"},"tutorial":{"times":[{"name":"01","day":1,"start":9,"end":11}],"name":"01"}},
     //      {"core":{"times":[{"name":"01","day":2,"start":15,"end":17},{"name":"01","day":3,"start":15,"end":17},{"name":"01","day":5,"start":15,"end":17}],"name":"01"},"tutorial":{"times":[{"name":"02","day":1,"start":3,"end":5}],"name":"02"}},...]
+    Course.prototype.fillEmptyCourseParts = function () {
+        var combos = this.combos;
+        var checkForArray = function (coursePart) {
+            // core, tut, lab
+            for (var part in coursePart) {
+                // combo.core, combo.tutorial, combo.lab
+                if ('length' in coursePart[part]) {
+                    coursePart = new DummyTimeBlock();
+                }
+            }
+        };
+        // for(let combo of combos){
+        //     this.log('BEFORE');
+        //     this.logObj(combo);
+        //     checkForArray(combo)
+        //     this.log('AFTER');
+        //     this.logObj(combo);
+        // }
+        for (var combo in combos) {
+            // combo.core, combo.tutorial, combo.lab
+            if ((combo['tutorial'] != null) && 'length' in combo['tutorial']) {
+                combo['tutorial'] = new DummyTimeBlock();
+                this.log('Filled course part=====' + combo['tutorial']);
+            }
+            if ((combo['lab'] != null) && 'length' in combo['lab']) {
+                combo['lab'] = new DummyTimeBlock();
+                this.log('Filled course part=====' + combo['lab']);
+            }
+        }
+    };
     Course.prototype.filterConflicts = function () {
+        var _this = this;
         var testCombos = [
             {
                 "core": {
@@ -158,10 +197,30 @@ var Course = (function () {
                 },
                 "tutorial": { "times": [{ "name": "01", "day": 1, "start": 9, "end": 13 }], "name": "01" },
                 "lab": { "times": [{ "name": "01", "day": 4, "start": 1, "end": 7 }], "name": "01" }
-            }];
+            }
+        ];
         //      TEST
         //        let combos = testCombos;
         var combos = this.combos;
+        // logObj(this.combos);
+        // console.log("combos[0].lab = " + this.logObj(this.combos));
+        _.each(combos, function (combo) {
+            if (!_.has(combo, "core.times")) {
+                // this.log("No core for = ");
+                // this.logObj(combo);
+                _.set(combo, "core", new DummyTimeBlock());
+            }
+            if (!_.has(combo, "tutorial.times")) {
+                _this.log("No tut for = ");
+                // this.logObj(combo);
+                _.set(combo, "tutorial", new DummyTimeBlock());
+            }
+            if (!_.has(combo, "lab.times")) {
+                _this.log("No lab for = ");
+                // this.logObj(combo);
+                _.set(combo, "lab", new DummyTimeBlock());
+            }
+        });
         var comboLen = combos.length;
         // var [] = this.combos;
         // combo is a combo core, tutorial, and lab sections
@@ -171,21 +230,45 @@ var Course = (function () {
         //          tutorial: times[{name: 02, start, end}, {...}],
         //          lab: times[{name: 03, start, end}, {...}]
         //      }
-        for (var _i = 0, combos_1 = combos; _i < combos_1.length; _i++) {
-            var combo = combos_1[_i];
+        // for (let combo of combos) {
+        for (var c = 0; c < combos.length; c++) {
+            var combo = combos[c];
             var foundValidCombo = false;
             // no valid counts can be found
             var foundConflict = false;
             // part is either core, tutorial, or lab
             // i.e. {core: times[{name, start, end}, {...}]}
             //this.log("Combo = ");
-            //this.logObj(combo);
+            // this.logObj(combo);
             //this.logObj(combo.core.times);
             //
             // for each core time
             // i.e.: core: times[{name: 01, start, end}, {...}]
-            for (var _a = 0, _b = combo.core.times; _a < _b.length; _a++) {
-                var core = _b[_a];
+            //this.log("BEFORE");
+            //this.logObj(combo);
+            // let hasLen = ((combo.core != null ) && 'length' in combo.core);
+            // if (hasLen && combo.core.times.length == 0) {
+            //     this.log("core times length = 0");
+            // let dummy = new DayClass();
+            // dummy.name = 'none';
+            // combo.core = {times: [], name: 'NONE'};
+            // combo.core = this.newDummyDayClass();
+            // combo.core = new DummyTimeBlock();
+            // }
+            //this.log("AFTER");
+            // this.logObj(combo);
+            var coreLen = 0;
+            var missing = false;
+            if ('length' in combo.core) {
+                comboLen = 1;
+                missing = true;
+            }
+            else {
+                coreLen = combo.core.times.length;
+            }
+            for (var _c = 0; _c < coreLen; _c++) {
+                // for (let core of combo.core.times) {
+                var core = combo.core.times[_c];
                 //this.log(core);
                 // put valid combos in temp combos
                 //      let tempCombo = {
@@ -212,34 +295,44 @@ var Course = (function () {
                 // };
                 //let tempCombo: Combo = new Combo();
                 // make sure
-                if ('length' in core) {
-                }
+                // if ('length' in core) {
+                //
+                // }
                 tempCombo.core = core;
                 // this.logObj(tempCombo);
                 // this.logObj(core);
                 // this.logObj();
-                if (combo.tutorial.times.length == 0) {
-                    this.log("Tutorial times length = 0");
+                // this.logObj(combo.tutorial.times);
+                //let hasLen = ((combo.tutorial != null ) && 'length' in combo.tutorial);
+                if (('length' in combo.tutorial) && combo.tutorial.length == 0) {
+                    // this.log("Tutorial times length = 0");
                     // let dummy = new DayClass();
                     // dummy.name = 'none';
-                    combo.tutorial.times[0] = this.newDummyDayClass();
+                    // combo.tutorial = {times: [], name: 'NONE'};
+                    // combo.tutorial.times[0] = this.newDummyDayClass();
+                    combo.tutorial = new DummyTimeBlock();
                 }
                 // for each tutorial time
                 // tutorial: times[{name: 02, start, end}, {...}]
-                for (var _c = 0, _d = combo.tutorial.times; _c < _d.length; _c++) {
-                    var tut = _d[_c];
+                for (var _i = 0, _a = combo.tutorial.times; _i < _a.length; _i++) {
+                    var tut = _a[_i];
                     tempCombo.tutorial = tut;
                     //tempCombo.lab = null;
                     // this.logObj(tempCombo);
                     // this.validateCombo(tempCombo);
                     //this.log(tut);
                     // for each lab
-                    if (combo.lab.times.length == 0) {
-                        // this.log("Lab times length = 0");
-                        tempCombo.lab = this.newDummyDayClass();
+                    var hasLen = ((combo.lab != null) && 'length' in combo.lab);
+                    if (hasLen && combo.lab.length == 0) {
+                        this.log("Lab times length = 0");
+                        // tempCombo.lab.times[0] = this.newDummyDayClass();
+                        // combos
+                        // combo.lab = {times: [], name: 'NONE'};
+                        // combo.lab.times[0] = this.newDummyDayClass();
+                        combo.lab = new DummyTimeBlock();
                     }
-                    for (var _e = 0, _f = combo.lab.times; _e < _f.length; _e++) {
-                        var lab = _f[_e];
+                    for (var _b = 0, _d = combo.lab.times; _b < _d.length; _b++) {
+                        var lab = _d[_b];
                         tempCombo.lab = lab;
                         // found a combo without
                         if (this.validateCombo(tempCombo)) {
@@ -251,16 +344,17 @@ var Course = (function () {
                     }
                 }
             }
-            this.logObj(combo);
+            //this.logObj(combo);
             if (foundValidCombo && !foundConflict) {
                 this.validCombos.push(combo);
             }
         }
-        this.log("Filtered combos = ");
-        this.logObj(this.validCombos);
+        // this.log("Filtered combos = ");
+        // this.logObj(this.validCombos);
     };
     Course.prototype.newDummyDayClass = function () {
         var d = new DayClass();
+        // let d = new DayClass();
         d.name = "NONE";
         return d;
     };
@@ -324,11 +418,38 @@ var Course = (function () {
         // there is a conflict if not
         if ((a.start < b.start && a.end <= b.start ||
             b.start < a.start && b.end <= a.start)) {
-            this.log("no  Conflict");
+            // this.log("no  Conflict");
             return true;
         }
-        this.log("Conflict FOUND");
+        // this.log("Conflict FOUND");
         return false;
+    };
+    // takes takes the individual class times out of a combo and puts them into a single array
+    Course.prototype.simplifyCombos = function () {
+        var set = [];
+        // let addClass: (days: DayClass[]) => {
+        //     for(let d of days){}
+        // };
+        for (var _i = 0, _a = this.validCombos; _i < _a.length; _i++) {
+            var comb = _a[_i];
+            var tempSet = [];
+            //let day: DayClass = new DayClass();
+            this.addDays(tempSet, comb.core.times);
+            this.addDays(tempSet, comb.tutorial.times);
+            this.addDays(tempSet, comb.lab.times);
+            set.push(tempSet);
+        }
+        this.simpleSet = set;
+        return set;
+    };
+    // takes ie core.times[]
+    // [{"name":"03","day":2,"start":13,"end":17}]
+    Course.prototype.addDays = function (set, days) {
+        //let set: DayClass[];
+        for (var _i = 0, days_1 = days; _i < days_1.length; _i++) {
+            var day = days_1[_i];
+            set.push(day);
+        }
     };
     return Course;
 }());
@@ -338,9 +459,18 @@ exports.Course = Course;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 exports.DAYS = { mo: 1, tu: 2, we: 3, th: 4, fr: 5 };
+var SimpleCombo = (function () {
+    function SimpleCombo() {
+    }
+    return SimpleCombo;
+}());
+exports.SimpleCombo = SimpleCombo;
 // combination of core, tutorial, and lab
 var Combo = (function () {
     function Combo() {
+        // core: DayClass[]|any[] = [];
+        // tutorial: DayClass[]|any[] = [];
+        // lab: DayClass[]|any[] = [];
         this.core = [];
         this.tutorial = [];
         this.lab = [];
@@ -353,6 +483,18 @@ var SingleCombo = (function () {
     }
     return SingleCombo;
 }());
+exports.SingleCombo = SingleCombo;
+var DummyTimeBlock = (function () {
+    function DummyTimeBlock() {
+        this.name = 'DUMMY';
+        this.times = [];
+        var day = new DayClass();
+        day.name = 'NONE';
+        this.times.push(day);
+    }
+    return DummyTimeBlock;
+}());
+exports.DummyTimeBlock = DummyTimeBlock;
 // time blocks for either core, lab, or tutorial
 var TimeBlock = (function () {
     function TimeBlock(name, coursepart) {
@@ -409,4 +551,5 @@ var DayClass = (function () {
     }
     return DayClass;
 }());
+exports.DayClass = DayClass;
 //# sourceMappingURL=Course.js.map

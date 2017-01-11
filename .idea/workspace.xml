@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="156d03be-aed7-4a12-803b-2631df1417cd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetable/types/TimetableBuilder.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetable/types/Timetabler.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetable/types/Utilities.ts" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/terminal.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/data/test.js" afterPath="$PROJECT_DIR$/timetable/data/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/CombinationTumbler.js" afterPath="$PROJECT_DIR$/timetable/types/CombinationTumbler.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/CombinationTumbler.js.map" afterPath="$PROJECT_DIR$/timetable/types/CombinationTumbler.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/CombinationTumbler.ts" afterPath="$PROJECT_DIR$/timetable/types/CombinationTumbler.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/Course.js" afterPath="$PROJECT_DIR$/timetable/types/Course.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/Course.js.map" afterPath="$PROJECT_DIR$/timetable/types/Course.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/Course.ts" afterPath="$PROJECT_DIR$/timetable/types/Course.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/TimetableGenerator.js" afterPath="$PROJECT_DIR$/timetable/types/TimetableGenerator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/TimetableGenerator.js.map" afterPath="$PROJECT_DIR$/timetable/types/TimetableGenerator.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetable/types/TimetableGenerator.ts" afterPath="$PROJECT_DIR$/timetable/types/TimetableGenerator.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,66 +35,77 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.569644">
+    <splitter split-orientation="horizontal" split-proportion="0.49843848">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="TimetableGenerator.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/timetable/types/TimetableGenerator.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CombinationTumbler.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/timetable/types/CombinationTumbler.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Course.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/timetable/types/Course.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="731">
-                  <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/timetable/data/test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1229">
-                  <caret line="2960" column="49" lean-forward="false" selection-start-line="2960" selection-start-column="49" selection-end-line="2960" selection-end-column="49" />
+                <state relative-caret-position="185">
+                  <caret line="33" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
                   <folding>
-                    <element signature="e#0#41#0" expanded="false" />
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#42#74#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="se-list-test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/timetable/data/se-list-test.js">
+          <file leaf-file-name="Utilities.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/timetable/types/Utilities.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="215" selection-end-column="5" />
+                <state relative-caret-position="153">
+                  <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+                  <folding>
+                    <element signature="n#!!doc;n#log#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CombinationTumbler.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/timetable/types/CombinationTumbler.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="519">
+                  <caret line="132" column="37" lean-forward="false" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#173#212#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Course.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/timetable/types/Course.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-2185">
+                  <caret line="388" column="38" lean-forward="false" selection-start-line="388" selection-start-column="38" selection-end-line="388" selection-end-column="38" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#42#70#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Timetabler.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/timetable/types/Timetabler.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#43#71#0" expanded="true" />
+                    <marker date="1484111583787" expanded="true" signature="1399:1552" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TimetableBuilder.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/timetable/types/TimetableBuilder.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -90,6 +114,16 @@
           <file leaf-file-name="tsconfig.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tsconfig.json">
               <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
@@ -97,25 +131,65 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CourseCombination.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/timetable/types/CourseCombination.ts">
+          <file leaf-file-name="Course.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/timetable/types/Course.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="5712">
+                  <caret line="338" column="0" lean-forward="false" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
                   <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="timetable.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/timetable/timetable.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="false" />
+                    <marker date="1484110920819" expanded="true" signature="7985:7986" ph="[...]" />
+                    <marker date="1484110920819" expanded="true" signature="7985:14903" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="7985:18592" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="9412:14812" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="10813:14655" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="12738:13114" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="12822:13037" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="13131:13222" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="13305:14641" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="13411:13608" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="13747:14136" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="13831:14056" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="14218:14623" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="14415:14494" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="14524:14601" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="14741:14802" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="14821:14897" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="14957:15074" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="15080:15348" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="15403:16863" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="15519:16258" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="16392:16428" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="16915:17551" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="17180:17300" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="17407:17484" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="17698:18259" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="17730:17820" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="17891:18203" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="18265:18340" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="18393:18570" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="18492:18564" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="19191:19253" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="19360:19608" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="19383:19588" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="19393:19507" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="19667:19729" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="19803:20016" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="19835:19987" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="20140:21935" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="20183:20463" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="20193:20276" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="20310:20386" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="20626:21525" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="20823:20896" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="20940:21397" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="21265:21353" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="21406:21519" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="21587:21910" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="21597:21725" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="21797:21883" ph="//..." />
+                    <marker date="1484110920819" expanded="true" signature="21999:22217" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="22026:22194" ph="{...}" />
+                    <marker date="1484110920819" expanded="true" signature="22051:22188" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -124,23 +198,16 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Course.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/timetable/types/Course.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="385">
-                  <caret line="406" column="39" lean-forward="false" selection-start-line="406" selection-start-column="39" selection-end-line="406" selection-end-column="39" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="[" pinned="false" current-in-tab="false">
-            <entry file="mock:///[">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="387">
-                  <caret line="46" column="2" lean-forward="true" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
-                  <folding />
+                <state relative-caret-position="17">
+                  <caret line="281" column="13" lean-forward="false" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#42#70#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -152,15 +219,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>console</find>
+      <find>&quot;NONE&quot;</find>
+      <find>Digital Systems and Interfacing</find>
+      <find>&quot;times&quot;</find>
+      <find>validCombos</find>
+      <find>newDummyDayClass</find>
+      <find>process</find>
+      <find>this.logObj</find>
+      <find>log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,12 +250,18 @@
         <option value="$PROJECT_DIR$/timetable/timetable.js" />
         <option value="$PROJECT_DIR$/timetable/data/se-list-test.js" />
         <option value="$PROJECT_DIR$/timetable/Test.js" />
-        <option value="$PROJECT_DIR$/timetable/types/CombinationTumbler.ts" />
-        <option value="$PROJECT_DIR$/timetable/types/Course.js" />
-        <option value="$PROJECT_DIR$/timetable/types/TimetableGenerator.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/timetable/data/test.js" />
+        <option value="$PROJECT_DIR$/timetable/types/Course.js" />
+        <option value="$PROJECT_DIR$/timetable/types/TimetableBuilder.ts" />
+        <option value="$PROJECT_DIR$/timetable/types/Utilities.js" />
+        <option value="$PROJECT_DIR$/timetable/types/Utilities.ts" />
+        <option value="$PROJECT_DIR$/tsconfig.json" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/timetable/types/Course.ts" />
+        <option value="$PROJECT_DIR$/timetable/types/Timetabler.ts" />
+        <option value="$PROJECT_DIR$/timetable/types/TimetableGenerator.ts" />
+        <option value="$PROJECT_DIR$/timetable/types/CombinationTumbler.ts" />
       </list>
     </option>
   </component>
@@ -234,7 +315,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -329,6 +409,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Timetabler.ts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimetableGen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimetableGen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="types" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Course.ts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
             </PATH_ELEMENT>
@@ -367,6 +469,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -465,12 +568,14 @@
       <workItem from="1483744741227" duration="23860000" />
       <workItem from="1483817014179" duration="8932000" />
       <workItem from="1483855659089" duration="7227000" />
-      <workItem from="1483899487382" duration="9664000" />
+      <workItem from="1483899487382" duration="29244000" />
+      <workItem from="1484019180841" duration="22786000" />
+      <workItem from="1484107631041" duration="4189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49730000" />
+    <option name="totallyTimeSpent" value="96285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -490,13 +595,12 @@
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="2583" y="1" width="518" height="980" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24035281" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14658849" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24035281" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Copy/Paste" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18336888" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39911798" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -504,6 +608,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -523,6 +628,12 @@
         <option value="$PROJECT_DIR$/timetable/types/Course.js.map" />
         <option value="$PROJECT_DIR$/timetable/types/CourseCombination.js.map" />
         <option value="$PROJECT_DIR$/timetable/types/CourseListProcessor.js.map" />
+        <option value="$PROJECT_DIR$/timetable/types/Timetabler.js" />
+        <option value="$PROJECT_DIR$/timetable/types/Timetabler.js.map" />
+        <option value="$PROJECT_DIR$/timetable/types/TimetableBuilder.js" />
+        <option value="$PROJECT_DIR$/timetable/types/TimetableBuilder.js.map" />
+        <option value="$PROJECT_DIR$/timetable/types/Utilities.js.map" />
+        <option value="$PROJECT_DIR$/timetable/types/Utilities.js" />
       </list>
     </option>
   </component>
@@ -531,39 +642,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/timetable/types/Course.js</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/timetable/types/TimetableGenerator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timetable/types/CombinationTumbler.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/timetable/types/Course.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -605,9 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -625,7 +713,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -633,7 +724,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#173#212#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -641,7 +734,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -683,9 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,7 +803,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -718,7 +814,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#173#212#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -726,7 +824,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -760,9 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,13 +871,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -826,14 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/timetable/Test.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -852,9 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -868,30 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timetable/data/se-list-test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="215" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timetable/types/CombinationTumbler.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timetable/types/TimetableGenerator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -900,55 +956,192 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timetable/types/Course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="385" column="0" lean-forward="false" selection-start-line="385" selection-start-column="0" selection-end-line="385" selection-end-column="0" />
-          <folding>
-            <marker date="1483910367609" expanded="true" signature="82:104" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="5816:10764" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="10770:11174" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="11229:11631" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="11373:11631" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="11445:11631" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="13485:13968" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="14327:14452" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="14350:14432" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="14511:14573" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="14656:16451" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="14699:14979" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="14709:14792" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="14826:14902" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="15142:16041" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="15339:15412" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="15456:15913" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="15781:15869" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="15922:16035" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="16103:16426" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="16113:16241" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="16313:16399" ph="//..." />
-            <marker date="1483910367609" expanded="true" signature="16515:16733" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="16542:16710" ph="{...}" />
-            <marker date="1483910367609" expanded="true" signature="16567:16704" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/timetable/data/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1229">
-          <caret line="2960" column="49" lean-forward="false" selection-start-line="2960" selection-start-column="49" selection-end-line="2960" selection-end-column="49" />
+        <state relative-caret-position="50592">
+          <caret line="2978" column="8" lean-forward="false" selection-start-line="2978" selection-start-column="8" selection-end-line="2978" selection-end-column="8" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/data/se-list-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1713">
+          <caret line="320" column="48" lean-forward="false" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/types/Course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5712">
+          <caret line="338" column="0" lean-forward="false" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
+          <folding>
+            <marker date="1484110920819" expanded="true" signature="7985:7986" ph="[...]" />
+            <marker date="1484110920819" expanded="true" signature="7985:14903" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="7985:18592" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="9412:14812" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="10813:14655" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="12738:13114" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="12822:13037" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="13131:13222" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="13305:14641" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="13411:13608" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="13747:14136" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="13831:14056" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="14218:14623" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="14415:14494" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="14524:14601" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="14741:14802" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="14821:14897" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="14957:15074" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="15080:15348" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="15403:16863" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="15519:16258" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="16392:16428" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="16915:17551" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="17180:17300" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="17407:17484" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="17698:18259" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="17730:17820" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="17891:18203" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="18265:18340" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="18393:18570" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="18492:18564" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="19191:19253" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="19360:19608" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="19383:19588" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="19393:19507" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="19667:19729" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="19803:20016" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="19835:19987" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="20140:21935" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="20183:20463" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="20193:20276" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="20310:20386" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="20626:21525" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="20823:20896" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="20940:21397" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="21265:21353" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="21406:21519" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="21587:21910" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="21597:21725" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="21797:21883" ph="//..." />
+            <marker date="1484110920819" expanded="true" signature="21999:22217" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="22026:22194" ph="{...}" />
+            <marker date="1484110920819" expanded="true" signature="22051:22188" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/types/Utilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/types/Utilities.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc;n#log#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/type-is/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="3948" column="23" lean-forward="false" selection-start-line="3948" selection-start-column="16" selection-end-line="3948" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/types/TimetableBuilder.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/types/Timetabler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/timetable/types/Course.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="406" column="39" lean-forward="false" selection-start-line="406" selection-start-column="39" selection-end-line="406" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="-2185">
+          <caret line="388" column="38" lean-forward="false" selection-start-line="388" selection-start-column="38" selection-end-line="388" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/types/Timetabler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#43#71#0" expanded="true" />
+            <marker date="1484111583787" expanded="true" signature="1399:1552" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/types/TimetableGenerator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timetable/types/CombinationTumbler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="132" column="37" lean-forward="false" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+          <folding>
+            <element signature="e#173#212#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
